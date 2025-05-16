@@ -30,6 +30,33 @@ A Smart Online Voting System using facial recognition to authenticate users and 
 
 ## 🚀 Getting Started
 
+
+---
+
+## 🚀 How It Works
+
+### 1. Face Registration
+Run `face_capture.py` to collect multiple facial images per voter.
+
+### 2. Model Training
+Use `train_model.py` to train the KNN classifier using the collected dataset.
+
+### 3. Voting
+Run `recognize_and_vote.py`. The system matches the user's face with the trained model and allows them to vote once if verified.
+
+### 4. Results
+Run `result_display.py` to generate bar graphs, pie charts, and vote statistics.
+
+---
+
+## ▶️ How to Run the App
+
+Make sure all dependencies are installed. You can run the main app (if `app.py` combines all phases or includes a GUI) using the following command:
+
+```bash
+python app.py
+
+
 ### 📦 Prerequisites
 
 Make sure you have Python 3.x and pip installed.
