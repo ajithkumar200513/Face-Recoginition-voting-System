@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voting Results</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        .chart-container {
+            width: 45%;
+            display: inline-block;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Voting Results</h1>
+    <p>Total votes cast: {{ total_votes }}</p>
+    
+    <h2>Candidate Performance</h2>
+    <div class="chart-container" id="candidateChart"></div>
+    <div class="chart-container" id="partyChart"></div>
+    
+    <h2>Voting Patterns</h2>
+    <div class="chart-container" id="timeChart"></div>
+    
+    <script>
+        // Candidate votes chart
+        const candidateData = {
+            values: {{ candidate_stats|map(attribute="3")|list|tojson }},
+            labels: {{ candidate_stats|map(attribute="1")|list|tojson }},
+            type: 'pie'
+        };
+        Plotly.newPlot('candidateChart', [candidateData], {title: 'Votes by Candidate'});
+        
+        // Party votes chart
+        const partyData = {
+            x: {{ candidate_stats|map(attribute="2")|list|tojson }},
+            y: {{ candidate_stats|map(attribute="3")|list|tojson }},
+            type: 'bar'
+        };
+        Plotly.newPlot('partyChart', [partyData], {title: 'Votes by Party'});
+        
+        // Time pattern chart
+        const timeData = {
+            x: {{ demographic_stats|map(attribute="0")|list|tojson }},
+            y: {{ demographic_stats|map(attribute="1")|list|tojson }},
+            type: 'scatter',
+            mode: 'lines+markers'
+        };
+        Plotly.newPlot('timeChart', [timeData], {title: 'Votes by Hour of Day'});
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Camera</title>
+    <style>
+        body { font-family: Arial; max-width: 500px; margin: 0 auto; padding: 20px; }
+        .camera-option { margin: 20px 0; padding: 15px; border: 1px solid #ddd; cursor: pointer; }
+        button { background: #4CAF50; color: white; padding: 10px 15px; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Select Your Camera</h1>
+    <form method="POST" action="/select_camera">
+        <div class="camera-option">
+            <input type="radio" id="builtin" name="camera_type" value="0" checked>
+            <label for="builtin">Built-in Camera</label>
+        </div>
+        <div class="camera-option">
+            <input type="radio" id="external" name="camera_type" value="1">
+            <label for="external">External Camera</label>
+        </div>
+        <button type="submit">Continue</button>
+    </form>
+</body>
+</html>

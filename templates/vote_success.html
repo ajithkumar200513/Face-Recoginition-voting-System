@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vote Submitted</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .success-message {
+            background-color: #dff0d8;
+            color: #3c763d;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .user-info {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-message">
+        <h1>Vote Submitted Successfully!</h1>
+    </div>
+    
+    <div class="user-info">
+        <h3>Thank you for voting, {{ user[1] }}!</h3>
+        <p>Your vote has been recorded.</p>
+    </div>
+    
+    <p><a href="/results">View Results</a> | <a href="/">Back to Home</a></p>
+</body>
+</html>
