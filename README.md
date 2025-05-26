@@ -1,7 +1,9 @@
 # 🗳️ Smart Online Voting System
 
 A Smart Online Voting System using facial recognition to authenticate users and ensure secure, fair voting. This project is developed using Python, OpenCV, Scikit-learn, and leverages the K-Nearest Neighbors (KNN) machine learning algorithm for face recognition. It also provides real-time visual statistical results such as bar charts and pie charts to display the ongoing election outcome.
-![Uploading what-is-facial-recognition-1-q75.jpg…]()
+
+![what-is-facial-recognition-1-q75-1](https://github.com/user-attachments/assets/d338049d-bc5d-4e8d-8477-63a2a5bb8788)
+
 
 ## ✅ Features
 
